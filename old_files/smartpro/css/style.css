@@ -1,0 +1,62 @@
+
+.form_photo {
+	width: 450px;
+	min-height: 100px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	font-family: Candara;
+}
+.instruct {
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+}
+#formdiv{
+    width:300px; 
+    float:left; 
+    text-align: center;
+}
+#file{
+    color:#FF7F00;
+    padding:8px; 
+	border:1px dashed #123456;
+	font-family: Candara;
+}
+#upload{
+    margin-left: 45px;
+}
+
+#noerror{
+    color:green;
+    text-align: left;
+}
+#error{
+    color:red;
+    text-align: left;
+}
+#img{ 
+    width: 17px;
+    border: none; 
+    height:17px;
+    margin-left: -20px;
+    margin-bottom: 91px;
+}
+
+.abcd{
+	text-align: center;
+}
+
+.abcd img{
+    height:100px;
+    width:100px;
+    padding: 5px;
+    border: 1px solid rgb(232, 222, 189);
+}
+b{
+    color:red;
+}
+#formget{
+    float:right; 
+
+}

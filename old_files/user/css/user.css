@@ -1,0 +1,171 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "font-awesome.min.css";
+
+@font-face {
+	font-family: Dax;
+	src: url('ufonts.com_dax-bold.ttf') format('truetype');
+	src:url('ufonts.com_dax-regular.eot') format('embedded-opentype');
+	src:url('DaxBold.eot') format('embedded-opentype');
+	src:url('DaxBold.svg') format('svg');
+	src:url('DaxBold.woff') format('woff');
+}
+@font-face {
+	font-family: Candara;
+	src: url('Candara.ttf') format('truetype');
+	src:url('Candara.eot') format('embedded-opentype');
+	src:url('Candara.svg') format('svg');
+	src:url('Candara.woff') format('woff');
+}
+@font-face {
+	font-family: Interstate;
+	src: url('Interstate%20Bold.ttf') format('truetype');
+	src: url('Interstate-Bold.eot') format('embedded-opentype');
+	src: url('Interstate-Bold.svg') format('svg');
+	src: url('Interstate-Bold.woff') format('woff');
+}
+
+.mrg105px
+{
+	margin-left:105px !important;
+}
+
+.chkBx
+{
+	height:30px;
+	width:30px;	
+	margin:20px;
+	margin-bottom:0;
+	margin-right:5px;
+}
+
+
+.linRels
+{
+	margin-top:30px;
+	font-size: 16px;
+	 color: #999	
+}
+
+.linRels a
+{
+	color:#1DB8EB;	
+}
+
+.userContent
+{
+	/*margin-top:10px;*/
+	min-height:500px;
+	clear:both;
+	width:1100px;
+	padding-bottom:20px;
+	margin-right:50px;
+	border:solid #000 0px;
+	margin-bottom:20px;
+	
+}
+
+.dash
+{
+	padding-top: 10px;
+	padding-right: 20px;
+	background: url(../images/dashboard.png) no-repeat left;
+	height:40px;
+	width:40px;	
+}
+
+.reports
+{
+	padding-top: 10px;
+	padding-right: 20px;
+	background: url(../images/report.png) no-repeat left;
+	height:40px;
+	width:40px;	
+}
+
+.logout
+{
+	padding-top: 10px;
+	padding-right: 20px;
+	background: url(../images/logout.png) no-repeat left;
+	height:40px;
+	width:40px;	
+}
+
+.txtLabel
+{
+	margin-right:30px;
+	float:left;
+	color:#7f7f7f;
+	font-family:Candara;
+	font-size:18px;
+	font-weight:bold;
+	width:150px;
+	line-height:30px;
+	text-align:left !important;
+	
+}
+
+.userTable .innerField
+{
+	min-height:40px;
+	padding:10px;
+}
+
+
+.userTableHeader td
+{
+	margin-right:20px;
+	color: #fff;
+	
+	padding:10px;
+	width:120px;
+	height:40px;
+	background:#000;
+	font-size: 14px;
+	font-weight: bold;
+	/*background-image: -webkit-gradient(linear, left top, left bottom, from(#14B0E4), to(#5CCCF1));
+  background-image: -webkit-linear-gradient(top, #14B0E4, #5CCCF1);
+  background-image: -moz-linear-gradient(top, #14B0E4, #5CCCF1);
+  background-image: -ms-linear-gradient(top, #14B0E4, #5CCCF1);
+  background-image: -o-linear-gradient(top, #14B0E4, #5CCCF1);
+  background-image: linear-gradient(top, #14B0E4, #5CCCF1);*/
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#cccccc), to(#000));
+  background-image: -webkit-linear-gradient(top, #cccccc, #000);
+  background-image: -moz-linear-gradient(top, #000, #cccccc);
+  background-image: -ms-linear-gradient(top, #000, #cccccc);
+  background-image: -o-linear-gradient(top, #000, #cccccc);
+  background-image: linear-gradient(top, #cccccc, #000);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.5);
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+  border: none;
+  
+	
+}
+
+.userTable tr:nth-child(even) 
+{
+	background: #BBBBBB;	
+	color:#000;
+}
+.userTable tr:nth-child(odd) 
+{
+	background: #e6e6e6;
+	color:#14B0E4;
+}
+
+.userTable tr:nth-child(even) a
+{
+	color:#000;
+}
+.userTable tr:nth-child(odd) a
+{
+	color:#14B0E4;
+}
+

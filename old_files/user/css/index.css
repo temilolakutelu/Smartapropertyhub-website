@@ -1,0 +1,144 @@
+@charset "utf-8";
+.bg{
+	background-color: #FFFFFF;
+	background-repeat: repeat-x;
+	color: #AA5603;
+	margin-top:200px;
+}
+.bginner {
+	background-repeat: repeat-x;
+	padding: 20px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #FF7F00;
+	border-left-color: #FF7F00;
+	color:#FF7F00;
+}
+.loginContainer {
+	margin-top: 0px;
+	width: 50%;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+}
+.loginHeader {
+	background-image: url(../images/loginHeader.png);
+	background-position: right;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 9px;
+	background-repeat: no-repeat;
+	color: #333;
+	margin: 0px;
+	height: 95px;
+	background-color: #222222;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #C0670E;
+	border-left-color: #C0670E;
+}
+.textBoxClass {
+	height: 30px;
+	width: 350px;
+	margin-left:20px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-bottom-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	border-top-left-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-right-radius: 5px;
+	border: 1px solid #F3C494;
+	text-indent:10px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #C96E13;
+}
+.errorMsg {
+	color: #FF0000;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.topBg {
+	background-color: #D96D00;
+	background-image: url(../images/topBG.png);
+	height: 40px;
+	-moz-border-radius-topleft: 5px;
+	border-top-left-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-right-radius: 5px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.circle{
+height: 70px;
+width: 70px;
+-moz-border-radius: 35px;
+border-radius: 35px;
+}
+.bottomBG{
+	background-color: #1CB3E5;/*#333;
+	background-image: url(../images/topBG.png);*/
+	height: 40px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-bottom-right-radius: 10px;
+	color: #FFF;
+	padding-top: 10px;
+	padding-left: 10px;
+	font-size: 10px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.whiteLink {
+	font-size: 10px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+body,td,th {
+	font-family: Verdana, Geneva, sans-serif;
+}
+.btnMini {
+	font-size: 16px;
+	color: #727272;
+	background-color: #EFEFEF;
+	border: 1px solid #666;
+	font-weight: bold;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.appName {
+	font-family:Dax;
+	color:#FF7F00;
+	font-size:25px;
+	width: 50%;
+	background-repeat: no-repeat;
+	height: 30px;
+	margin-top: 12px;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	background-position: -5px;
+}
+#apDiv1 {
+	position: absolute;
+	width: 642px;
+	height: 50px;
+	z-index: 1;
+	left: 208px;
+	top: 179px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 9px;
+	color: #FFFFFF;
+	margin: auto;
+}/* CSS Document */

@@ -1,0 +1,164 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "font-awesome.min.css";
+
+body,
+div,
+table,
+p
+{
+	margin: 0;
+	padding: 0;
+}
+.clear {
+	clear: both;
+}
+
+.liner {
+	background: #00238C;
+	width: 100%;
+	height: 8px;
+	margin-top: 200px;
+}
+div.login_container {
+	width: 600px;
+	min-height: 455px;
+	border: 2px solid #FF7F00;
+	margin: auto;
+	margin-top: -120px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+}
+.logo {
+	margin: 10px 0 0 45px;
+	height: 77px;
+}
+.version {
+	height: 20px;
+	padding-right: 20px;
+	text-align: right;
+	color: #00BFFF;
+	font-family: Candara;
+	font-size: 15px;
+	font-weight: bold;
+}
+.form_container {
+	margin-top: 20px;
+	min-height: 300px;
+}
+.response {
+	min-height: 22px;
+	padding-left: 35px;
+	font-family: Candara;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	margin: 0 auto;
+	width: 450px;
+	margin-bottom: 15px;
+	padding: 8px 5px 5px 20px;
+	border: 2px solid #D83500;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+}
+.error {
+	background: url(../images/exclamation-red-frame-icon.png) no-repeat 95% 50%;
+	color: #D83500;
+}
+.success {
+	color: #0C3;
+}
+.header {
+	padding: 10px 35px;
+	font-family: Dax;
+	font-size: 15px;
+	color: #fff;
+	background: #00BFFF;
+}
+.table_login {
+	width: 500px;
+	border-collapse: collapse;
+	margin: 20px 0 10px 40px;
+}
+.table_login td {
+	padding: 8px;
+}
+.table_login tr td label {
+	font-family: Candara;
+	font-size: 15px;
+	color: #00218C;
+	font-weight: bold;
+}
+.table_login tr td input[type="text"] {
+	border: 1px solid #00BFFF;
+	width: 360px;
+	padding: 8px;
+	border-radius: 10px;
+	background: #fff;
+	font-family: Candara;
+	font-size: 15px;
+	color: #00BFFF;
+}
+.table_login tr td input[type="password"] {
+	border: 1px solid #00BFFF;
+	width: 360px;
+	padding: 8px;
+	border-radius: 10px;
+	background: #fff;
+	font-family: Candara;
+	font-size: 15px;	
+	color: #00BFFF;
+}
+.table_login tr td font {
+	font-family: Candara;
+	font-size: 15px;
+	font-weight: bold;
+	color: #8A8A7A;
+	padding-left: 20px;
+}
+.table_login tr td font a {
+	text-decoration: none;
+	color: #000515;
+}
+.table_login tr td font a:hover {
+	text-decoration: underline;
+}
+.table_login tr td button {
+	float: right;
+	background-image: url(../images/button_bg.png);
+	background-repeat: no-repeat;
+	background: linear-gradient(#000000, #001664);
+	background: -webkit-linear-gradient(#000000, #001664);
+	background: -moz-linear-gradient(#000000, #001664);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#001664'); /* For IE6 & IE7 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000000', endColorstr='#001664')"; /* for IE8 */
+	padding: 6px 30px;
+	font-family: Dax;
+	font-size: 15px;
+	color: #fff;
+	border: 1px solid #001664;
+	border-radius: 5px;	
+}
+.table_login tr td button:after {
+	font-family: FontAwesome;
+	content: "\f0da";
+	margin-left: 10px;
+}
+.table_login tr td button:hover {
+	background: #00BFFF;
+	border: 1px solid #00BFFF;
+	cursor: pointer;
+}
+.footer {
+	padding: 10px 35px;
+	font-family: Candara;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	background: #00BFFF;	
+}
+
+

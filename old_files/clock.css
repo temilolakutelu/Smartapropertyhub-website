@@ -1,0 +1,130 @@
+@charset "utf-8";
+#clock {
+	background: url(c4.png) no-repeat center;
+	height: 300px;
+	position: relative;
+	width: 300px;
+	margin-left:150px;
+}
+@media (max-width:1200px){
+    #clock {
+	margin-left:0;
+    }
+}
+#clock div {
+	position: absolute;
+	left:50%
+}
+#clock img[src*="second"] {
+	transition: transform 600000s linear 0s;
+	background-color:green;
+}
+#clock:target img[src*="second"] {
+	transform: rotate(3600000deg);
+	
+}
+#clock img[src*="minute"] {
+	transition: transform 360000s linear 0s;
+}
+#clock:target img[src*="minute"] {
+	transform: rotate(36000deg);
+}
+#clock img[src*="hour"] {
+	transition: transform 216000s linear 0s;
+}
+#clock:target img[src*="hour"] {
+	transform: rotate(360deg);
+}
+
+.container{
+/*	position:relative;
+	border:1px solid black;*/
+	padding-top:30px;
+/*	margin-top:0px;
+	height:100%;
+	width:100%;*/
+
+}
+
+#div{
+	position:inherit;
+	/*border:1px solid black;*/
+	height:300px;
+	width:600px;
+	left:550px;
+	top:-180px;
+	margin:0px;
+	padding:0px;
+}
+
+@font-face {
+  font-family: "Open sans";
+}
+
+
+
+
+
+/*Original Style Below*/
+/*#clock {
+	background-image: url("c4.png");
+	height: 300px;
+	position: relative;
+	width: 300px;
+	margin-left:200px;
+	top:100px;
+}
+#clock div {
+	position: absolute;
+	left:50%
+}
+#clock img[src*="second"] {
+	transition: transform 600000s linear 0s;
+	background-color:green;
+}
+#clock:target img[src*="second"] {
+	transform: rotate(3600000deg);
+	
+}
+#clock img[src*="minute"] {
+	transition: transform 360000s linear 0s;
+}
+#clock:target img[src*="minute"] {
+	transform: rotate(36000deg);
+}
+#clock img[src*="hour"] {
+	transition: transform 216000s linear 0s;
+}
+#clock:target img[src*="hour"] {
+	transform: rotate(360deg);
+}
+
+.container{
+	position:relative;
+	border:1px solid black;
+	padding-top:30px;
+	margin-top:0px;
+	height:100%;
+	width:100%;
+
+}
+
+#div{
+	position:inherit;
+	border:1px solid black;
+	height:300px;
+	width:600px;
+	left:550px;
+	top:-180px;
+	margin:0px;
+	padding:0px;
+}
+
+@font-face {
+  font-family: "AlegreyaSans-Regular";
+  src:url(AlegreyaSans-Regular.ttf)
+  format("truetype");
+}*/
+
+
+
