@@ -23,7 +23,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
  */
-$config['base_url'] = 'http://www.propertyhub.com.ng/';
+$config['base_url'] = 'http://localhost/propertyhub/';
 //'http://localhost/propertyhub/';
 //'http://www.propertyhub.com.ng/'
 

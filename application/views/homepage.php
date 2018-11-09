@@ -1379,7 +1379,7 @@
                                     <div class="single-agent">
                                         <div class="agent-details">
                                             <h3>Susan Peter</h3>
-                                            <p class="position">Founder & CEO at Realty Properties Inc.</p>
+                                            <p class="position">Team Lead.</p>
 
                                             <div class="agent-contact">
                                                 <p>
@@ -1409,7 +1409,7 @@
                                     <div class="single-agent">
                                         <div class="agent-details">
                                             <h3>John Ibe</h3>
-                                            <p class="position">Company Agent at Cool Houses Inc.</p>
+                                            <p class="position">Company Agent.</p>
 
                                             <div class="agent-contact">
                                                 <p>
@@ -1439,7 +1439,7 @@
                                     <div class="single-agent">
                                         <div class="agent-details">
                                             <h3>Bidemi Enitan</h3>
-                                            <p class="position">Founder & selling at Realty Properties Inc.</p>
+                                            <p class="position">Company Agent.</p>
                                             <div class="agent-contact">
                                                 <p>
                                                     <i class="fa fa-phone"></i>
@@ -1468,7 +1468,7 @@
                                     <div class="single-agent">
                                         <div class="agent-details">
                                             <h3>Nnamdi Okukwe</h3>
-                                            <p class="position">Founder & CEO at Realty Properties Inc.</p>
+                                            <p class="position">Company agent.</p>
                                             <div class="agent-contact">
                                                 <p>
                                                     <i class="fa fa-phone"></i>
@@ -1525,7 +1525,7 @@
                                     <div class="single-agent">
                                         <div class="agent-details">
                                             <h3>Susan Peter</h3>
-                                            <p class="position">Founder & CEO at Realty Properties Inc.</p>
+                                            <p class="position">Team Lead.</p>
 
                                             <div class="agent-contact">
                                                 <p>
@@ -1555,7 +1555,7 @@
                                     <div class="single-agent">
                                         <div class="agent-details">
                                             <h3>John Ibe</h3>
-                                            <p class="position">Company Agent at Cool Houses Inc.</p>
+                                            <p class="position">Company Agent.</p>
 
                                             <div class="agent-contact">
                                                 <p>
@@ -1586,7 +1586,7 @@
                                     <div class="single-agent">
                                         <div class="agent-details">
                                             <h3>Bidemi Enitan</h3>
-                                            <p class="position">Founder & selling at Realty Properties Inc.</p>
+                                            <p class="position">Company Agent.</p>
                                             <div class="agent-contact">
                                                 <p>
                                                     <i class="fa fa-phone"></i>
@@ -1615,7 +1615,7 @@
                                     <div class="single-agent">
                                         <div class="agent-details">
                                             <h3>Nnamdi Okukwe</h3>
-                                            <p class="position">Founder & CEO at Realty Properties Inc.</p>
+                                            <p class="position">Company Agent.</p>
                                             <div class="agent-contact">
                                                 <p>
                                                     <i class="fa fa-phone"></i>
