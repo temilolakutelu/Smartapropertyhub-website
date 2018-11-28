@@ -22,15 +22,7 @@ a:hover {
     color: #ed8019;
 }
 
-.list-inline-listing .active{
-    background: #ed8019;
-    border: 2px solid #ed8019;
-}
 
-.list-inline-listing li:hover{
-    background: #ed8019;
-    border: 2px solid #ed8019;
-}
 
 .counters {
     background: #0d9ebd;

@@ -22,7 +22,7 @@
 <h3><i class="fa fa-sign-in"></i>
 Login
 </h3>
-<form class="login-form">
+<form class="login-form"  action="<?php echo base_url(); ?>smartPro/">
 <div class="form-group">
 <div class="input-icon">
 <i class="fa fa-user"></i>

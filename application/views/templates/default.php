@@ -28,11 +28,9 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/map.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>fonts/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>fonts/linearicons/style.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/dropzone.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/css/bootstrap-select.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/js/bootstrap-select.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">

@@ -1343,10 +1343,10 @@ input[type=submit] {
 .list-inline-listing {
     padding: 0;
     margin: 0 0 30px;
-    text-align: center
+    text-align: center;
+    
 }
-
-.list-inline-listing li {
+.list-inline-listing .btn{
     padding: 7px 25px;
     margin: 4px;
     border: 2px solid #129dc0;
@@ -1355,13 +1355,43 @@ input[type=submit] {
     box-shadow: none;
     font-size: 12px;
     font-weight: 600;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #fff;
+    cursor: pointer;
+    width: 120px;
 }
 
-.list-inline-listing .active,
-.list-inline-listing li:hover {
-    color: #fff;
-    box-shadow: none
+.list-inline-listing .btn:focus{
+    outline: none;
+    background-color: #eb561c;
+    border: 2px solid #eb561c;
+    color: white;
 }
+.list-inline-listing .btn:hover {
+    background-color: #eb561c;
+    border: 2px solid #eb561c;
+    color: white;
+  }
+  
+  .list-inline-listing .btn:first-child.active{
+    background-color: #eb561c;
+    border: 2px solid #eb561c;
+    color: white;
+  }
+.filtr-item {
+    float: left;
+    line-height: 100px;
+    text-align: center;
+    margin: 2px;
+    display: none;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+
 .recently-properties .property{
     border-radius:10px;
 }

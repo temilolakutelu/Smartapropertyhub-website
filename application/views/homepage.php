@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/owl.carousel.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/range-Slider.min.css">
+
+
 <!-- Banner start -->
 <section class="banner banner_video_bg">
     <div class="pattern-overlay" id="carousel-example-generic">
@@ -587,34 +589,46 @@
         <div class="main-title">
             <h1><span>Featured</span> Properties</h1>
         </div>
-        <ul class="list-inline-listing filters filters-listing-navigation">
-            <li class="active btn filtr-button filtr" data-filter="all">All</li>
-            <li data-filter="1" class="btn btn-inline filtr-button filtr">House</li>
-            <li data-filter="2" class="btn btn-inline filtr-button filtr">Office</li>
-            <li data-filter="3" class="btn btn-inline filtr-button filtr">Apartment</li>
-            <li data-filter="4" class="btn btn-inline filtr-button filtr">Residential</li>
-        </ul>
-        <div class="row">
-            <div class="filtr-container">
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  filtr-item" data-category="1, 2, 3">
+
+        <div id='category' class="list-inline-listing filters filters-listing-navigation">
+            <button class="active btn btn-inline filtr-button filtr" onclick="filterSelection('all')">All</button>
+            <button class="btn btn-inline filtr-button filtr"  onclick="filterSelection('commercial')"> Commercial</button>
+            <button class="btn btn-inline filtr-button filtr" onclick="filterSelection('office')"> Office</button>
+            <button class="btn btn-inline filtr-button filtr" onclick="filterSelection('apartment')"> Apartment</button>
+            <button class="btn btn-inline filtr-button filtr" onclick="filterSelection('residential')"> Residential</button>
+        </div>
+
+        <div class='row container'>
+          
+             
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 filtr-item commercial">
                     <div class="property">
                         <!-- Property img -->
                         <a href="#" class="property-img">
 
-                            <div class="property-tag button sale">For Sale</div>
-                            <div class="property-price">&#8358;150,000</div>
+                            <div class="property-tag button sale">
+                                <?= $home->category_Name; ?>
+                            </div>
+                            <div class="property-price">
+                                <?= $home->currency; ?>
+                                <?= $home->price; ?>
+                            </div>
                             <img src="<?php echo base_url(); ?>img/properties\p-1.jpg" alt="properties-1" class="img-responsive img-fluid">
                         </a>
                         <!-- Property content -->
                         <div class="property-content">
                             <!-- title -->
                             <h1 class="title">
-                                <a href="#">Beautiful Single Home</a>
+                                <a href="#">
+                                    <?= $home->property_Name; ?></a>
                             </h1>
                             <!-- Property address -->
                             <h3 class="property-address">
                                 <a href="#">
-                                    <i class="fa fa-map-marker"></i>25, raymond dokpesi, Ikeja.
+                                    <i class="fa fa-map-marker"></i>
+                                    <?= $home->street; ?>,
+                                    <?= $home->city; ?>,
+                                    <?= $home->country; ?>
                                 </a>
                             </h3>
                             <!-- Facilities List -->
@@ -626,10 +640,6 @@
                                 <li>
                                     <i class="flaticon-bed"></i>
                                     <span>3 Beds</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-monitor"></i>
-                                    <span>TV </span>
                                 </li>
                                 <li>
                                     <i class="flaticon-holidays"></i>
@@ -646,146 +656,45 @@
                             </ul>
                             <!-- Property footer -->
                             <div class="property-footer">
-                                <span class="left"><i class="fa fa-calendar-o icon"></i> 5 days ago</span>
+                                <span class="left"><i class="fa fa-calendar-o icon"></i>
+                                    <?= $home->date_Added; ?></span>
 
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  filtr-item" data-category="1, 2, 3">
+                </div>
+               
+
+               
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 filtr-item office residential">
                     <div class="property">
                         <!-- Property img -->
                         <a href="#" class="property-img">
 
-                            <div class="property-tag button sale">For Rent</div>
-                            <div class="property-price">&#8358;120,000</div>
-                            <img src="<?php echo base_url(); ?>img/properties\p-2.jpg" alt="properties-2" class="img-responsive img-fluid">
+                            <div class="property-tag button sale">
+                                <?= $home->category_Name; ?>
+                            </div>
+                            <div class="property-price">
+                                <?= $home->currency; ?>
+                                <?= $home->price; ?>
+                            </div>
+                            <img src="<?php echo base_url(); ?>img/properties\p-1.jpg" alt="properties-1" class="img-responsive img-fluid">
                         </a>
                         <!-- Property content -->
                         <div class="property-content">
                             <!-- title -->
                             <h1 class="title">
-                                <a href="#">Modern Family Home</a>
+                                <a href="#">
+                                    <?= $home->property_Name; ?></a>
                             </h1>
                             <!-- Property address -->
                             <h3 class="property-address">
                                 <a href="#">
-                                    <i class="fa fa-map-marker"></i>22, Old road, Abuja.
-                                </a>
-                            </h3>
-                            <!-- Facilities List -->
-                            <ul class="facilities-list clearfix">
-                                <li>
-                                    <i class="flaticon-square-layouting-with-black-square-in-east-area"></i>
-                                    <span>4500 sq ft</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-bed"></i>
-                                    <span>2 Beds</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-monitor"></i>
-                                    <span>TV </span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-holidays"></i>
-                                    <span> 3 Baths</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-vehicle"></i>
-                                    <span>1 Garage</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-building"></i>
-                                    <span> 2 Balcony</span>
-                                </li>
-                            </ul>
-                            <!-- Property footer -->
-                            <div class="property-footer">
-                                <span class="left"><i class="fa fa-calendar-o icon"></i> 3 days ago</span>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  filtr-item" data-category="1, 2, 3">
-                    <div class="property">
-                        <!-- Property img -->
-                        <a href="#" class="property-img">
-
-                            <div class="property-tag button sale">For Sale</div>
-                            <div class="property-price">&#8358;180,000</div>
-                            <img src="<?php echo base_url(); ?>img/properties\p-3.jpg" alt="properties-3" class="img-responsive img-fluid">
-                        </a>
-                        <!-- Property content -->
-                        <div class="property-content">
-                            <!-- title -->
-                            <h1 class="title">
-                                <a href="#">Sweet Family Home</a>
-                            </h1>
-                            <!-- Property address -->
-                            <h3 class="property-address">
-                                <a href="#">
-                                    <i class="fa fa-map-marker"></i>21, palm Avenue estate, Ibadan.
-                                </a>
-                            </h3>
-                            <!-- Facilities List -->
-                            <ul class="facilities-list clearfix">
-                                <li>
-                                    <i class="flaticon-square-layouting-with-black-square-in-east-area"></i>
-                                    <span>4500 sq ft</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-bed"></i>
-                                    <span>2 Beds</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-monitor"></i>
-                                    <span>TV </span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-holidays"></i>
-                                    <span> 3 Baths</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-vehicle"></i>
-                                    <span>1 Garage</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-building"></i>
-                                    <span> 2 Balcony</span>
-                                </li>
-                            </ul>
-                            <!-- Property footer -->
-                            <div class="property-footer">
-                                <span class="left"><i class="fa fa-calendar-o icon"></i> 3 days ago</span>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  filtr-item" data-category="1, 2, 3">
-                    <div class="property">
-                        <!-- Property img -->
-                        <a href="#" class="property-img">
-
-                            <div class="property-tag button sale">For Rent</div>
-                            <div class="property-price">&#8358;120,000</div>
-                            <img src="<?php echo base_url(); ?>img/properties\p-4.jpg" alt="properties-4" class="img-responsive img-fluid">
-                        </a>
-                        <!-- Property content -->
-                        <div class="property-content">
-                            <!-- title -->
-                            <h1 class="title">
-                                <a href="#">Big Head Home</a>
-                            </h1>
-                            <!-- Property address -->
-                            <h3 class="property-address">
-                                <a href="#">
-                                    <i class="fa fa-map-marker"></i>22, Old road, Abuja.
+                                    <i class="fa fa-map-marker"></i>
+                                    <?= $home->street; ?>,
+                                    <?= $home->city; ?>,
+                                    <?= $home->country; ?>
                                 </a>
                             </h3>
                             <!-- Facilities List -->
@@ -796,15 +705,11 @@
                                 </li>
                                 <li>
                                     <i class="flaticon-bed"></i>
-                                    <span>5 Beds</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-monitor"></i>
-                                    <span>TV </span>
+                                    <span>3 Beds</span>
                                 </li>
                                 <li>
                                     <i class="flaticon-holidays"></i>
-                                    <span> 3 Baths</span>
+                                    <span> 2 Baths</span>
                                 </li>
                                 <li>
                                     <i class="flaticon-vehicle"></i>
@@ -812,245 +717,20 @@
                                 </li>
                                 <li>
                                     <i class="flaticon-building"></i>
-                                    <span> 2 Balcony</span>
+                                    <span> 3 Balcony</span>
                                 </li>
                             </ul>
                             <!-- Property footer -->
                             <div class="property-footer">
-                                <span class="left"><i class="fa fa-calendar-o icon"></i> 5 days ago</span>
+                                <span class="left"><i class="fa fa-calendar-o icon"></i>
+                                    <?= $home->date_Added; ?></span>
 
                             </div>
                         </div>
                     </div>
+
                 </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  filtr-item" data-category="1, 2, 3">
-                    <div class="property">
-                        <!-- Property img -->
-                        <a href="#" class="property-img">
-
-                            <div class="property-tag button sale">For Sale</div>
-                            <div class="property-price">&#8358;120,000</div>
-                            <img src="<?php echo base_url(); ?>img/properties\p-5.jpg" alt="properties-5" class="img-responsive img-fluid">
-                        </a>
-                        <!-- Property content -->
-                        <div class="property-content">
-                            <!-- title -->
-                            <h1 class="title">
-                                <a href="#">Big Head Home</a>
-                            </h1>
-                            <!-- Property address -->
-                            <h3 class="property-address">
-                                <a href="#">
-                                    <i class="fa fa-map-marker"></i>22, Old road, Abuja.
-                                </a>
-                            </h3>
-                            <!-- Facilities List -->
-                            <ul class="facilities-list clearfix">
-                                <li>
-                                    <i class="flaticon-square-layouting-with-black-square-in-east-area"></i>
-                                    <span>4800 sq ft</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-bed"></i>
-                                    <span>5 Beds</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-monitor"></i>
-                                    <span>TV </span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-holidays"></i>
-                                    <span> 3 Baths</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-vehicle"></i>
-                                    <span>1 Garage</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-building"></i>
-                                    <span> 2 Balcony</span>
-                                </li>
-                            </ul>
-                            <!-- Property footer -->
-                            <div class="property-footer">
-                                <span class="left"><i class="fa fa-calendar-o icon"></i> 5 days ago</span>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  filtr-item" data-category="1, 2, 3">
-                    <div class="property">
-                        <!-- Property img -->
-                        <a href="#" class="property-img">
-
-                            <div class="property-tag button sale">For Rent</div>
-                            <div class="property-price">&#8358;120,000</div>
-                            <img src="<?php echo base_url(); ?>img/properties\p-6.jpg" alt="properties-6" class="img-responsive img-fluid">
-                        </a>
-                        <!-- Property content -->
-                        <div class="property-content">
-                            <!-- title -->
-                            <h1 class="title">
-                                <a href="#">Big Head Home</a>
-                            </h1>
-                            <!-- Property address -->
-                            <h3 class="property-address">
-                                <a href="#">
-                                    <i class="fa fa-map-marker"></i>22, Old road, Abuja.
-                                </a>
-                            </h3>
-                            <!-- Facilities List -->
-                            <ul class="facilities-list clearfix">
-                                <li>
-                                    <i class="flaticon-square-layouting-with-black-square-in-east-area"></i>
-                                    <span>4800 sq ft</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-bed"></i>
-                                    <span>5 Beds</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-monitor"></i>
-                                    <span>TV </span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-holidays"></i>
-                                    <span> 3 Baths</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-vehicle"></i>
-                                    <span>1 Garage</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-building"></i>
-                                    <span> 2 Balcony</span>
-                                </li>
-                            </ul>
-                            <!-- Property footer -->
-                            <div class="property-footer">
-                                <span class="left"><i class="fa fa-calendar-o icon"></i> 5 days ago</span>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  filtr-item" data-category="1, 2, 3">
-                    <div class="property">
-                        <!-- Property img -->
-                        <a href="#" class="property-img">
-
-                            <div class="property-tag button sale">For Sale</div>
-                            <div class="property-price">&#8358;120,000</div>
-                            <img src="<?php echo base_url(); ?>img/properties\p-7.jpg" alt="properties-7" class="img-responsive img-fluid">
-                        </a>
-                        <!-- Property content -->
-                        <div class="property-content">
-                            <!-- title -->
-                            <h1 class="title">
-                                <a href="#">Office</a>
-                            </h1>
-                            <!-- Property address -->
-                            <h3 class="property-address">
-                                <a href="#">
-                                    <i class="fa fa-map-marker"></i>22, Old road, Abuja.
-                                </a>
-                            </h3>
-                            <!-- Facilities List -->
-                            <ul class="facilities-list clearfix">
-                                <li>
-                                    <i class="flaticon-square-layouting-with-black-square-in-east-area"></i>
-                                    <span>4800 sq ft</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-bed"></i>
-                                    <span>50 Office</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-monitor"></i>
-                                    <span>Kitchen</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-holidays"></i>
-                                    <span> 3 Restrooms</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-vehicle"></i>
-                                    <span>1 Garage</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-building"></i>
-                                    <span> 2 Balcony</span>
-                                </li>
-                            </ul>
-                            <!-- Property footer -->
-                            <div class="property-footer">
-                                <span class="left"><i class="fa fa-calendar-o icon"></i> 5 days ago</span>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12  filtr-item" data-category="1, 2, 3">
-                    <div class="property">
-                        <!-- Property img -->
-                        <a href="#" class="property-img">
-
-                            <div class="property-tag button sale">For Rent</div>
-                            <div class="property-price">&#8358;120,000</div>
-                            <img src="<?php echo base_url(); ?>img/properties\p-8.jpg" alt="properties-8" class="img-responsive img-fluid">
-                        </a>
-                        <!-- Property content -->
-                        <div class="property-content">
-                            <!-- title -->
-                            <h1 class="title">
-                                <a href="#">Big Head Home</a>
-                            </h1>
-                            <!-- Property address -->
-                            <h3 class="property-address">
-                                <a href="#">
-                                    <i class="fa fa-map-marker"></i>22, Old road, Abuja.
-                                </a>
-                            </h3>
-                            <!-- Facilities List -->
-                            <ul class="facilities-list clearfix">
-                                <li>
-                                    <i class="flaticon-square-layouting-with-black-square-in-east-area"></i>
-                                    <span>4800 sq ft</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-bed"></i>
-                                    <span>5 Beds</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-monitor"></i>
-                                    <span>TV </span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-holidays"></i>
-                                    <span> 3 Baths</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-vehicle"></i>
-                                    <span>1 Garage</span>
-                                </li>
-                                <li>
-                                    <i class="flaticon-building"></i>
-                                    <span> 2 Balcony</span>
-                                </li>
-                            </ul>
-                            <!-- Property footer -->
-                            <div class="property-footer">
-                                <span class="left"><i class="fa fa-calendar-o icon"></i> 5 days ago</span>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
+               
         </div>
     </div>
 </div>
@@ -1068,29 +748,40 @@
         </div>
         <div class="row">
             <div class="carousel our-partners slide" id="ourPartners2">
-                <!-- <div class="col-lg-12 mrg-btm-30">
-                    <a class="right carousel-control" href="#" data-slide="prev"><i class="fa fa-chevron-left icon-prev"></i></a>
-                    <a class="right carousel-control" href="#" data-slide="next"><i class="fa fa-chevron-right icon-next"></i></a>
-                </div> -->
+
+                <!-- Controls -->
+                <div class="col-lg-12 mrg-btm-30">
+                    <a class="right carousel-control" href="#ourPartners2" data-slide="prev"><i class="fa fa-chevron-left icon-prev"></i></a>
+                    <a class="right carousel-control" href="#ourPartners2" data-slide="next"><i class="fa fa-chevron-right icon-next"></i></a>
+                </div>
+
+                <!-- Wrapper for slides -->
                 <div class="carousel-inner">
-                    <div class="item active">
+
+                    <?php foreach ($recent_data as $recent) { ?>
+                    <div class="item <?= $recent->item; ?>">
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <!-- Property start -->
                             <div class="property">
                                 <!-- Property img -->
                                 <a href="#" class="property-img">
-                                    <img src="<?php echo base_url(); ?>img/my-properties/rp-1.jpg" alt="recently-properties1" class="img-responsive">
+                                    <img src="<?php echo base_url(); ?>img/my-properties/rp-1.jpg" alt="recently-properties1"
+                                        class="img-responsive">
                                 </a>
                                 <!-- Property content -->
                                 <div class="property-content">
                                     <!-- title -->
                                     <h1 class="title">
-                                        <a href="#">Modern Family Home</a>
+                                        <a href="#">
+                                            <?= $recent->property_Name; ?></a>
                                     </h1>
                                     <!-- Property address -->
                                     <h3 class="property-address">
                                         <a href="#">
-                                            <i class="fa fa-map-marker"></i>25, raymond dokpesi, Ikeja.
+                                            <i class="fa fa-map-marker"></i>
+                                            <?= $recent->street; ?>,
+                                            <?= $recent->city; ?>,
+                                            <?= $recent->country; ?>
                                         </a>
                                     </h3>
                                     <!-- Facilities List -->
@@ -1114,7 +805,8 @@
                                     </ul>
                                     <!-- Property footer -->
                                     <div class="property-footer">
-                                        <span class="left"><i class="fa fa-calendar-o icon"></i> 5 days ago</span>
+                                        <span class="left"><i class="fa fa-calendar-o icon"></i>
+                                            <?= $recent->date_Added; ?></span>
 
                                     </div>
                                 </div>
@@ -1122,153 +814,9 @@
                             <!-- Property end -->
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <!-- Property start -->
-                            <div class="property">
-                                <!-- Property img -->
-                                <a href="#" class="property-img">
-                                    <img src="<?php echo base_url(); ?>img/my-properties/rp-2.jpg" alt="properties-2" class="img-responsive">
-                                </a>
-                                <!-- Property content -->
-                                <div class="property-content">
-                                    <!-- title -->
-                                    <h1 class="title">
-                                        <a href="#">Beautiful Single Home</a>
-                                    </h1>
-                                    <!-- Property address -->
-                                    <h3 class="property-address">
-                                        <a href="#">
-                                            <i class="fa fa-map-marker"></i>25, raymond dokpesi, Ikeja.
-                                        </a>
-                                    </h3>
-                                    <!-- Facilities List -->
-                                    <ul class="facilities-list clearfix">
-                                        <li>
-                                            <i class="flaticon-square-layouting-with-black-square-in-east-area"></i>
-                                            <span>4800 sq ft</span>
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-bed"></i>
-                                            <span>3 Beds</span>
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-holidays"></i>
-                                            <span> 2 Baths</span>
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-vehicle"></i>
-                                            <span>1 Garage</span>
-                                        </li>
-                                    </ul>
-                                    <!-- Property footer -->
-                                    <div class="property-footer">
-                                        <span class="left"><i class="fa fa-calendar-o icon"></i> 5 days ago</span>
+                    <?php 
+                } ?>
 
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Property end -->
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <!-- Property start -->
-                            <div class="property">
-                                <!-- Property img -->
-                                <a href="#" class="property-img">
-                                    <img src="<?php echo base_url(); ?>img/my-properties/rp-3.jpg" alt="properties-3" class="img-responsive">
-                                </a>
-                                <!-- Property content -->
-                                <div class="property-content">
-                                    <!-- title -->
-                                    <h1 class="title">
-                                        <a href="#">Park Avenue</a>
-                                    </h1>
-                                    <!-- Property address -->
-                                    <h3 class="property-address">
-                                        <a href="#">
-                                            <i class="fa fa-map-marker"></i>25, raymond dokpesi, Ikeja.
-                                        </a>
-                                    </h3>
-                                    <!-- Facilities List -->
-                                    <ul class="facilities-list clearfix">
-                                        <li>
-                                            <i class="flaticon-square-layouting-with-black-square-in-east-area"></i>
-                                            <span>4800 sq ft</span>
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-bed"></i>
-                                            <span>3 Beds</span>
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-holidays"></i>
-                                            <span> 2 Baths</span>
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-vehicle"></i>
-                                            <span>1 Garage</span>
-                                        </li>
-                                    </ul>
-                                    <!-- Property footer -->
-                                    <div class="property-footer">
-                                        <span class="left"><i class="fa fa-calendar-o icon"></i> 5 days ago</span>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Property end -->
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <!-- Property start -->
-                            <div class="property">
-                                <!-- Property img -->
-                                <a href="#" class="property-img">
-                                    <img src="<?php echo base_url(); ?>img/my-properties/rp-4.jpg" alt="properties-4" class="img-responsive">
-                                </a>
-                                <!-- Property content -->
-                                <div class="property-content">
-                                    <!-- title -->
-                                    <h1 class="title">
-                                        <a href="#">Sweet Family Home</a>
-                                    </h1>
-                                    <!-- Property address -->
-                                    <h3 class="property-address">
-                                        <a href="#">
-                                            <i class="fa fa-map-marker"></i>25, raymond dokpesi, Ikeja.
-                                        </a>
-                                    </h3>
-                                    <!-- Facilities List -->
-                                    <ul class="facilities-list clearfix">
-                                        <li>
-                                            <i class="flaticon-square-layouting-with-black-square-in-east-area"></i>
-                                            <span>4800 sq ft</span>
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-bed"></i>
-                                            <span>3 Beds</span>
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-holidays"></i>
-                                            <span> 2 Baths</span>
-                                        </li>
-                                        <li>
-                                            <i class="flaticon-vehicle"></i>
-                                            <span>1 Garage</span>
-                                        </li>
-                                    </ul>
-                                    <!-- Property footer -->
-                                    <div class="property-footer">
-                                        <span class="left"><i class="fa fa-calendar-o icon"></i> 5 days ago</span>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Property end -->
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1721,7 +1269,7 @@
                                     <i class="fa fa-quote-right quote fa-3x"></i>
                                 </blockquote>
                             </div>
-                            
+
                         </div>
 
                     </div>
@@ -1824,5 +1372,50 @@
         </div>
     </div>
 </div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filtr-item");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("category");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
 <script src="<?php echo base_url(); ?>js/owl.carousel.min.js"></script>
 <script src="<?php echo base_url(); ?>js/range-Slider.min.js"></script>
