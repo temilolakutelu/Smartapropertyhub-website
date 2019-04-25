@@ -72,7 +72,7 @@ switch (ENVIRONMENT) {
 
 	case 'testing':
 	case 'production':
-		ini_set('display_errors', 0);
+		ini_set('display_errors', 1);
 		if (version_compare(PHP_VERSION, '5.3', '>=')) {
 			error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
 		} else {
@@ -278,6 +278,9 @@ if (!isset($view_folder[0]) && is_dir(APPPATH . 'views' . DIRECTORY_SEPARATOR)) 
 }
 
 define('VIEWPATH', $view_folder . DIRECTORY_SEPARATOR);
+
+if ( function_exists( 'date_default_timezone_set' ) )
+date_default_timezone_set('Africa/Lagos');
 
 /*
  * --------------------------------------------------------------------

@@ -4,19 +4,36 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Faq extends CI_Controller
 {
 
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
+        $this->load->model(['Login_model']);
+        $this->load->library('session');
+        $this->load->helper(array('url'));
     }
 
     public function index()
     {
-        $data = array(
+        if ($this->session->userdata('logged_in')) {
 
-            'title' => 'Faq',
+            $login = $this->session->userdata('logged_in');
+            $user_id = $login['user_id'];
+            $row = $this->Login_model->get_by_id($user_id);
+            $username = $row->username;
+            $data = array(
+                'title' => 'FAQ',
+                'username' => $username,
+                'id' => $user_id,
+            );
 
-        );
+        } else {
+            $data = array(
 
+                'title' => 'FAQ',
+
+            );
+
+        }
         $this->template->load('default', 'faq', $data);
     }
 }

@@ -8,6 +8,7 @@ a:hover {
 
 .property-content .title a{
     color: #08a2bd;
+    text-transform: capitalize;
 }
 .ytpicon,.mb_YTPTime{
     color:#fff;
@@ -91,10 +92,6 @@ input[type=checkbox]:checked + label:before {
     background: #109dc0;
 }
 
-.theme-tabs .tab-nav > li > a::after {
-    background: #109dc0; none repeat scroll 0% 0%;
-}
-
 
 #prop:hover,
 #prop:focus {
@@ -114,7 +111,7 @@ input[type=checkbox]:checked + label:before {
 }
 
 .search-button {
-    background: #109dc0;
+     background: rgb(231, 131, 32);
 }
 .search-button:hover,
 .search-button:focus {
@@ -124,7 +121,6 @@ input[type=checkbox]:checked + label:before {
 
 .main-header .navbar-default .navbar-left  > li > a:hover {
    color: #e78320 !important;
-   border-top: solid 2px #109dc0;
 }
 
 .intro-section {
@@ -193,6 +189,27 @@ input[type=checkbox]:checked + label:before {
 .category-content .btn, .category-content .pricing-btn {
     background: #109dc0;
 }
+
+/* Pulse Grow */
+@keyframes pulse-grow {
+  to {
+    transform: scale(1.1);
+  }
+}
+.pulse-grow {
+  display: inline-block;
+  -webkit-tap-highlight-color: transparent;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+.pulse-grow:hover {
+  animation-name: pulse-grow;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
 .agent-box .title a:hover{
     color: #109dc0;
 }
@@ -355,8 +372,9 @@ blockquote {
     color: rgb(231, 131, 32);
 }
 
-.top-header ul li a:hover {
-    color: rgb(231, 131, 32);
+.top-header ul li a:hover
+ {
+    color: rgb(97, 92, 86);
 }
 
 .helping-center .icon {
@@ -485,14 +503,25 @@ table.manage-table td.action a:hover{
 .dropzone-design:hover {
     border: 2px dashed rgb(231, 131, 32);
 }
-
+/* @media (min-width: 768px){
+    .navbar-toggle {
+        display: none;
+    }
+}
 @media (max-width: 768px) {
+    .top-header #menu-bar{
+    display: none
+    }
+    .top-header {
+        padding: 0px;
+    }
     .navbar-default .navbar-toggle{
-        background: rgb(231, 131, 32);
+        background: rgb(31, 155, 191);
+        width: 40px;
     }
 
     .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-        background: rgb(231, 131, 32);
+        background: white;
     }
 
     .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
@@ -501,8 +530,8 @@ table.manage-table td.action a:hover{
     }
 
     .main-header .navbar-default .nav > li > a:hover {
-        background: rgb(231, 131, 32);
-    }
+        /* background: rgb(231, 131, 32); */
+    /* }
 
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
         background-color: rgb(231, 131, 32) !important;
@@ -511,4 +540,4 @@ table.manage-table td.action a:hover{
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
         background: #eee;
     }
-}
+}  */

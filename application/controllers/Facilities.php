@@ -4,19 +4,36 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Facilities extends CI_Controller
 {
 
-    function __construct()
+    public function __construct()
     {
         parent::__construct();
+        $this->load->model(['Login_model']);
+        $this->load->library('session');
+        $this->load->helper(array('url'));
     }
+
     public function index()
     {
+        if ($this->session->userdata('logged_in')) {
 
-        $data = array(
+            $login = $this->session->userdata('logged_in');
+            $user_id = $login['user_id'];
+            $row = $this->Login_model->get_by_id($user_id);
+            $username = $row->username;
+            $data = array(
+                'title' => 'Facilities',
+                'username' => $username,
+                'id' => $user_id,
+            );
 
-            'title' => 'Home page',
+        } else {
+            $data = array(
 
-        );
+                'title' => 'Facilities',
 
+            );
+
+        }
         $this->template->load('default', 'facilities', $data);
 
     }

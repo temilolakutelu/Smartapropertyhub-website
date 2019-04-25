@@ -19,348 +19,198 @@
 
 <!-- Listing Sidebar Area Start -->
 <section class="royal-listing-sidebar-area ">
-    <div class="container mt-5">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-9 col-sm-12 col-xs-12 page-content">
+            <div class="col-md-8 col-sm-12 col-xs-12 page-content">
                 <div>
                     <div class="well well-sm">
-                        <strong>Properties For sale</strong>
+                        <strong>Properties & Houses for sale.</strong>
                         <div class="btn-group">
                             <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
                                 </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th"></span>Grid</a>
                         </div>
                     </div>
 
+                    <!-- <div class="dropdown float-right">
+                        Sort by
+                        <button class="btn defualt" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Price</span></button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Most
+                                Recent</a>
+                            <a class="dropdown-item" href="#">Lowest
+                                Price</a>
+                            <a class="dropdown-item" href="#">Highest
+                                Price</a>
+                            <a class="dropdown-item" href="#">Beds</a>
+                        </div>
+                    </div> -->
+
                 </div>
 
-                <div id="products" class="row list-group" style='box-shadow: none;'>
-                    <div class="item  col-xs-6 col-lg-4">
-                        <div class="thumbnail">
+                <div id="products" class="list-group" style='box-shadow: none;'>
+                    <?php foreach ($results as $sale) {?>
 
-                            <img class="group list-group-image" src="<?php echo base_url(); ?>img/forsale(400x250)/rp-1.jpg"
-                                alt="" />
-                            <div class="property_overlay"></div>
-                            <div class="pro-info">
-                                <ul>
-                                    <li>
-                                        <i class="fa fa-bed"></i>
-                                        02
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-bath"></i>
-                                        04
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-taxi"></i>
-                                        yes
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="caption">
-                                <div class="property-text">
-                                    <h3><a href="#">Morden Apartment</a></h3>
-                                    <div class="pro-details-price">
-                                        <p>2 Million(Naira)</p>
-                                        <a href="#">More Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item  col-xs-6 col-lg-4">
-                        <div class="thumbnail">
+                                                    <div class="item list-group-item col-xs-12 col-sm-6 col-md-4">
+                                                        <div class="thumbnail">
+                                                            <?php
+if ($sale->featured == 1) {?>
+                                                        <div class="ribbon red"><span>Featured</span></div>
+                                                                                <?php
+}?>
+                                                    <img class="group list-group-image" src="http://smartpro.propertyhub.com.ng/uploads/<?=$sale->imageURL;?>" alt="" />
+                                                                                                                <div class="property_overlay"></div>
+                                                                                                                <div class="pro-info">
+                                                                                                                    <ul>
+                                                                                                                        <li>
+                                                                                                                            <i class="fa fa-bed"></i>
+                                                                                                                            <?=$sale->bedroom;?>
+                                                                                                                </li>
+                                                                                                                <li>
+                                                                                                                    <i class="fa fa-bath"></i>
+                                                                                                                    <?=$sale->bathroom;?>
+                                                                                                                </li>
+                                                                                                                <li>
+                                                                                                                    <i class="fa fa-beer"></i>
+                                                                                                                    <?=$sale->toilet;?>
+                                                                                                                </li>
+                                                                                                            </ul>
+                                                                                                        </div>
+                                                                                                        <div class="caption">
+                                                                                                            <div class="property-text">
+                                                                                                                <h4><a href="<?=site_url('home/property_view/' . $sale->property_ID);?>">
+                                                                                                                <?=$sale->property_Name;?></a></h4>
 
-                            <img class="group list-group-image" src="<?php echo base_url(); ?>img/forsale(400x250)/rp-2.jpg"
-                                alt="" />
-                            <div class="property_overlay"></div>
-                            <div class="pro-info">
-                                <ul>
-                                    <li>
-                                        <i class="fa fa-bed"></i>
-                                        02
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-bath"></i>
-                                        04
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-taxi"></i>
-                                        yes
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="caption">
-                                <div class="property-text">
-                                    <h3><a href="#">Morden Apartment</a></h3>
-                                    <div class="pro-details-price">
-                                        <p>2 Million(Naira)</p>
-                                        <a href="#">More Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item  col-xs-6 col-lg-4">
-                        <div class="thumbnail">
+                                                                                                                <p style='font-size: 10px;'><i class="fa fa-map-marker"></i>
+                                                                                                                 <?=$sale->street;?>
+                                                                                                                <?=$sale->city;?>,
+                                                                                                                <?=$sale->state;?></p>
 
-                            <img class="group list-group-image" src="<?php echo base_url(); ?>img/forsale(400x250)/rp-3.jpg"
-                                alt="" />
-                            <div class="property_overlay"></div>
-                            <div class="pro-info">
-                                <ul>
-                                    <li>
-                                        <i class="fa fa-bed"></i>
-                                        02
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-bath"></i>
-                                        04
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-taxi"></i>
-                                        yes
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="caption">
-                                <div class="property-text">
-                                    <h3><a href="#">Morden Apartment</a></h3>
-                                    <div class="pro-details-price">
-                                        <p>2 Million(Naira)</p>
-                                        <a href="#">More Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item  col-xs-6 col-lg-4">
-                        <div class="thumbnail">
+                                                                                                                <div class="pro-details-price">
+                                                                                                                    <p>
+                                                                                                                        <?php if ($sale->currency == 'NGN') {
+    echo '₦';
+} elseif ($sale->currency == 'USD') {
+    echo '$';
+} elseif ($sale->currency == 'EUR') {
+    echo '€';
+} else {
+    echo $sale->currency;
+}
+    ?>
+                                                                                                                <?=number_format($sale->price);?>
+                                                                                                                </p>
+                                                                                                                <a href="<?=site_url('home/property_view/' . $sale->property_ID);?>">More Details</a>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
 
-                            <img class="group list-group-image" src="<?php echo base_url(); ?>img/forsale(400x250)/rp-4.jpg"
-                                alt="" />
-                            <div class="property_overlay"></div>
-                            <div class="pro-info">
-                                <ul>
-                                    <li>
-                                        <i class="fa fa-bed"></i>
-                                        02
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-bath"></i>
-                                        04
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-taxi"></i>
-                                        yes
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="caption">
-                                <div class="property-text">
-                                    <h3><a href="#">Morden Apartment</a></h3>
-                                    <div class="pro-details-price">
-                                        <p>2 Million(Naira)</p>
-                                        <a href="#">More Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item  col-xs-6 col-lg-4">
-                        <div class="thumbnail">
-
-                            <img class="group list-group-image" src="<?php echo base_url(); ?>img/forsale(400x250)/rp-5.jpg"
-                                alt="" />
-                            <div class="property_overlay"></div>
-                            <div class="pro-info">
-                                <ul>
-                                    <li>
-                                        <i class="fa fa-bed"></i>
-                                        02
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-bath"></i>
-                                        04
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-taxi"></i>
-                                        yes
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="caption">
-                                <div class="property-text">
-                                    <h3><a href="#">Morden Apartment</a></h3>
-                                    <div class="pro-details-price">
-                                        <p>2 Million(Naira)</p>
-                                        <a href="#">More Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item  col-xs-6 col-lg-4">
-                        <div class="thumbnail">
-
-                            <img class="group list-group-image" src="<?php echo base_url(); ?>img/forsale(400x250)/rp-6.jpg"
-                                alt="" />
-                            <div class="property_overlay"></div>
-                            <div class="pro-info">
-                                <ul>
-                                    <li>
-                                        <i class="fa fa-bed"></i>
-                                        02
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-bath"></i>
-                                        04
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-taxi"></i>
-                                        yes
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="caption">
-                                <div class="property-text">
-                                    <h3><a href="#">Morden Apartment</a></h3>
-                                    <div class="pro-details-price">
-                                        <p>2 Million(Naira)</p>
-                                        <a href="#">More Details</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                                                                                                                                                        <?php
+}?>
                 </div>
 
-
-
-
-
-
-                <div class="pagination-bar">
-                    <ul class="pagination">
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a class="pagination-btn" href="#">Next »</a></li>
-                    </ul>
+                <div id="pagination">
+                    <?php echo $links; ?>
                 </div>
 
             </div>
 
+            <div class="col-md-4 col-sm-12 col-xs-12 widget-area-sidebar">
+                <!-- <div class="side-fliter">
+                    <div class="post-request text-center">
+                        <h3 class="sidebar-caption">States</h3>
+                        <ul class="filter-conditions">
+                            <?php foreach ($state as $state) {?>
+                                                                                                                <li> <a itemprop="item" href="property-for-sale/in/lagos.html">
+                                                                                                                        <?=$state->state;?></a> </li>
+                                                                                                                                                                                                        <?php
+}?>
+                        </ul>
 
 
+                    </div>
+                </div> -->
+                <div class="side-fliter">
+                    <div class="post-request text-center">
+                        <h3 class="sidebar-caption">Can't Find the Property you want?</h3>
+                        <div class="container-2">
+                            <a href="<?=site_url('user/property_alert');?>">
+                                <div class="btn btn-two" style='  width: 260px;'>
+                                    <span>Submit Property Alert</span>
+                                </div>
+                            </a>
+                        </div>
 
-            <div class="col-md-3 col-sm-12 col-xs-12 widget-area-sidebar">
-                <div class="listing-widget-box left-margin">
+                    </div>
+                </div>
+
+                 <div class="side-fliter" style='margin-top:10px'>
+
                     <div class="single-listing-widget">
-                        <h3>Find New Home</h3>
-                        <form action="post">
-                            <div class="single-search-property">
-                                <input type="text" name="type" placeholder="Keyword (e.g. 'office')" data-role='none'>
-                            </div>
+                        <h3>Property Advanced Search</h3>
+                        <form action='<?=base_url();?>for_sale/filter' method="post">
+
 
                             <select name="location" id="location" class="single-search-property">
                                 <option selected="selected">Select Location...</option>
-                                <option value='Abia'>Abia</option>
-                                <option value='Adamawa'>Adamawa</option>
-                                <option value='AkwaIbom'>AkwaIbom</option>
-                                <option value='Anambra'>Anambra</option>
-                                <option value='Bauchi'>Bauchi</option>
-                                <option value='Bayelsa'>Bayelsa</option>
-                                <option value='Benue'>Benue</option>
-                                <option value='Borno'>Borno</option>
-                                <option value='CrossRivers'>CrossRivers</option>
-                                <option value='Delta'>Delta</option>
-                                <option value='Ebonyi'>Ebonyi</option>
-                                <option value='Edo'>Edo</option>
-                                <option value='Ekiti'>Ekiti</option>
-                                <option value='Enugu'>Enugu</option>
-                                <option value='Gombe'>Gombe</option>
-                                <option value='Imo'>Imo</option>
-                                <option value='Jigawa'>Jigawa</option>
-                                <option value='Kaduna'>Kaduna</option>
-                                <option value='Kano'>Kano</option>
-                                <option value='Katsina'>Katsina</option>
-                                <option value='Kebbi'>Kebbi</option>
-                                <option value='Kogi'>Kogi</option>
-                                <option value='Kwara'>Kwara</option>
-                                <option value='Lagos'>Lagos</option>
-                                <option value='Nasarawa'>Nasarawa</option>
-                                <option value='Niger'>Niger</option>
-                                <option value='Ogun'>Ogun</option>
-                                <option value='Ondo'>Ondo</option>
-                                <option value='Osun'>Osun</option>
-                                <option value='Oyo'>Oyo</option>
-                                <option value='Plateau'>Plateau</option>
-                                <option value='Rivers'>Rivers</option>
-                                <option value='Sokoto'>Sokoto</option>
-                                <option value='Taraba'>Taraba</option>
-                                <option value='Yobe'>Yobe</option>
-                                <option value='Zamfara'>Zamafara</option>
+                                <?php foreach ($state_data as $state): ?>
+                                                                                                                <option value="<?php echo $state->name; ?>">
+                                                                                                                <?php echo $state->name; ?>
+                                                                                                                </option>
+                                                                                                                                                                                            <?php endforeach;?>
                             </select>
 
-                            <div class="single-search-property">
-                                <input type="text" name="minarea" placeholder="Min area (sqft)" data-role="none">
-                            </div>
-                            <div class="single-search-property">
-                                <input type="text" name="maxarea" placeholder="Max area (sqft)" data-role="none">
-                            </div>
-                            <div class="single-search-property">
-                                <input type="text" name="minbeds" placeholder="Min Beds" data-role="none">
-                            </div>
-                            <div class="single-search-property">
-                                <input type="text" name="minbath" placeholder="Min Baths" data-role="none">
-                            </div>
+                            <select name="type" id="type" class="single-search-property">
+                                <option selected="selected">Select Type...</option>
+                                <?php foreach ($type_data as $type): ?>
+                                                                                                                <option value="<?php echo $type->type_id; ?>">
+                                                                                                                <?php echo $type->type_name; ?>
+                                                                                                                </option>
+                                                                                                                                                                                            <?php endforeach;?>
+                            </select>
+                            <select id="subtype" name="subtype" disabled="" class="single-search-property">
+                                <option>Select Subtype...</option>
+                            </select>
 
+
+                            <select name="bedroom" data-live-search="true" data-live-search-placeholder="Search value" class="single-search-property">
+                                <option selected="selected" value='0' selected>
+                                    Any no. of Bed</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                                <option value='5'>5</option>
+                                <option value='6'>6</option>
+                                <option value='7'>7</option>
+                            </select>
+
+                            <select name="max-price" data-live-search="true" data-live-search-placeholder="Search value" class="single-search-property">
+                                <option value="0" selected="selected">Max Price
+                                </option>
+                                <option value='10000'>10,000</option>
+                                <option value='100000'>100,000</option>
+                                <option value='1000000'>1,000,000</option>
+                                <option value='10000000'>10,000,000</option>
+                                <option value='500000000'>500,000,000</option>
+                            </select>
                             <div class="slidecontainer">
-                                <input type="range" min="1" max="100" value="50" class="slider" id="min">
-                                <p>Min. Price: <span id="minval"></span></p>
+                                <!-- <input type="range" min="10000" max="100000" value="50000" class="slider" id="min">
+                                <p>Min. Price: ₦ <span id="minval"></span></p>
 
-                                <input type="range" min="1" max="1000" value="100" class="slider" id="max">
-                                <p>Max. Price: <span id="maxval"></span></p>
-                            </div> 
+                                <input type="range" min="100000" max="100000000" value="100000" class="slider" id="max">
+                                <p>Max. Price: ₦ <span id="maxval"></span></p> -->
+
+
+
+
+
+                            </div>
 
 
                             <div class="single-listing-search-property">
                                 <div class="row">
-                                    <div class="col-md-6">
-
-                                        <dl class="options">
-                                            <dt>
-                                                <a href="#">
-                                                    <span class="hida">Select</span>
-                                                    <p class="multiSel"></p>
-                                                </a>
-                                            </dt>
-                                            <dd>
-                                                <div class="mutliSelect">
-                                                    <ul>
-                                                        <li>
-                                                            <input type="checkbox" id="group-0" value="Group">
-                                                            <label for="group-0" class="grouplist_id">Group</label>
-                                                        </li>
-                                                        <li>
-                                                            <input type="checkbox" id="group-1" value="Group 1">
-                                                            <label for="group-1" class="grouplist_id">Group 1</label>
-                                                        </li>
-                                                        <li>
-                                                            <input type="checkbox" id="group-2" value="Group 2">
-                                                            <label for="group-2" class="grouplist_id">Group 2</label>
-                                                        </li>
-                                                        <li>
-                                                            <input type="checkbox" id="group-3" value="Group 3">
-                                                            <label for="group-3" class="grouplist_id">Group 3</label>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-                                            </dd>
-                                        </dl>
-                                    </div>
                                     <div class="col-md-6">
                                         <div class="listing-search">
                                             <button type="submit" data-role='none'>Search</button>
@@ -374,77 +224,65 @@
 
 
                     </div>
-                    <div class="single-listing-widget">
-                        <h3>recent property</h3>
-                        <ul>
-                            <li>
-                                <div class="recent-img">
-                                    <a href="#">
-                                        <img src="<?php echo base_url(); ?>img/properties/p-1.jpg" alt="recent image">
-                                    </a>
-                                </div>
-                                <div class="recent-text">
-                                    <h4>
-                                        <a href="#">historic Town House</a>
-                                    </h4>
-                                    <p>45 Regent Street, London, UK</p>
-                                    <p>$78,600</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="recent-img">
-                                    <a href="#">
-                                        <img src="<?php echo base_url(); ?>img/properties/p-2.jpg" alt="recent image">
-                                    </a>
-                                </div>
-                                <div class="recent-text">
-                                    <h4>
-                                        <a href="#">historic Town House</a>
-                                    </h4>
-                                    <p>45 Regent Street, London, UK</p>
-                                    <p>$78,600</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="recent-img">
-                                    <a href="#">
-                                        <img src="<?php echo base_url(); ?>img/properties/p-3.jpg" alt="recent image">
-                                    </a>
-                                </div>
-                                <div class="recent-text">
-                                    <h4>
-                                        <a href="#">historic Town House</a>
-                                    </h4>
-                                    <p>45 Regent Street, London, UK</p>
-                                    <p>$78,600</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="recent-img">
-                                    <a href="#">
-                                        <img src="<?php echo base_url(); ?>img/properties/p-4.jpg" alt="recent image">
-                                    </a>
-                                </div>
-                                <div class="recent-text">
-                                    <h4>
-                                        <a href="#">historic Town House</a>
-                                    </h4>
-                                    <p>45 Regent Street, London, UK</p>
-                                    <p>$78,600</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+</div>
+
+                <form action="<?php echo site_url('home/subscribe'); ?>" method="POST" class="envelope-cont text-center alert2-form">
+                    <img src="<?php echo base_url(); ?>img/page-banner.jpg" alt="">
+                    <p>Receive alerts when new properties are available:</p>
+                    <input type="text" name="name" required="required" class="form-control" placeholder="Name" value="">
+                    <input type="email" name="email" required="required" class="form-control" placeholder="Email Address" value="">
+
+                    <button class="btn secondry btn-block alert2-btn" type="button">Subscribe</button>
+                </form>
+                <div id="side" class="mrg-btm-70 ">
+                    <a href="http://c.jumia.io/?a=134508&c=442&p=r&E=kkYNyk2M4sk%3d&utm_source=cake&utm_medium=affiliation&utm_campaign=134508&utm_term="><img src="https://affiliates.jumia.com/banners/Jumia Nigeria/MensClothing/250X250.jpg" /></a>
                 </div>
+
+
+                    <!-- <div class="single-listing-widget">
+                        <h3>recent properties</h3>
+                        <ul>
+                            <?php
+
+foreach ($recent_data as $recent) {?>
+                                                                                                                <li>
+                                                                                                                    <div class="recent-img">
+                                                                                                                        <a href="<?=site_url('home/property_view/' . $recent->property_ID);?>">
+                                                                                                                <img src="http://smartpro.propertyhub.com.ng/uploads/<?=$recent->imageURL;?>" alt="recent image">
+                                                                                                                </a>
+                                                                                                            </div>
+                                                                                                            <div class="recent-text">
+                                                                                                                <h4>
+                                                                                                                    <a href="<?=site_url('home/property_view/' . $recent->property_ID);?>">
+                                                                                                                <?=$recent->property_Name;?></a>
+                                                                                                                </h4>
+                                                                                                                <p>
+                                                                                                                    <?php if ($recent->currency == 'NGN') {
+    echo '₦';
+} elseif ($recent->currency == 'USD') {
+    echo '$';
+} elseif ($recent->currency == 'EUR') {
+    echo '€';
+} else {
+    echo $recent->currency;
+}
+    ?>
+                                                                                                                <?=number_format($recent->price);?>
+                                                                                                                </p>
+                                                                                                            </div>
+                                                                                                        </li>
+                                                                                                                                                                                <?php
+}?>
+                        </ul>
+                    </div> -->
+
             </div>
         </div>
     </div>
 </section>
-
-<script src="js/bootstrap-select.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
 <script>
-
     var minslider = document.getElementById("min");
     var minoutput = document.getElementById("minval");
 
@@ -454,22 +292,38 @@
     minoutput.innerHTML = minslider.value;
     maxoutput.innerHTML = maxslider.value;
 
-    minslider.oninput = function () {
+    minslider.oninput = function() {
         minoutput.innerHTML = this.value;
     }
-    maxslider.oninput = function () {
+    maxslider.oninput = function() {
         maxoutput.innerHTML = this.value;
     }
-
 </script>
-<script>
-    $(document).ready(function () {
-        $('#list').click(function (event) { event.preventDefault(); $('#products .item').addClass('list-group-item'); });
-        $('#grid').click(function (event) { event.preventDefault(); $('#products .item').removeClass('list-group-item'); $('#products .item').addClass('grid-group-item'); });
 
+<script type="text/javascript">
+    $(document).ready(function() {
 
+        $('#type').on('change', function() {
+            var type_id = $(this).val();
+            if (type_id == '') {
+                // window.location.reload();
+            } else {
+                $('#subtype').prop('disabled', false);
+                $.ajax({
+                    url: "<?=base_url('for_sale/get_subtype');?>",
+                    type: "POST",
+                    data: {
+                        'type_id': type_id
+                    },
+                    success: function(data) {
+                        $('#subtype').html(data);
+                    },
+                    error: function() {
+                        alert('Error Occur....!!');
+                    }
+                });
+            }
 
-
+        });
     });
 </script>
-<script src="js/dropdown.js"></script>

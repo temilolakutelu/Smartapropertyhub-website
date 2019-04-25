@@ -1,0 +1,88 @@
+.header {
+    margin: 20px 0;
+}
+.header h1 {
+    font-weight: 200;
+    letter-spacing: -1px;
+    margin: 0 0 15px;
+    padding: 0;
+    color: #666;
+}
+.header h1, body h1, body h2, body h3 {
+    font-family: Raleway,sans-serif;
+}
+.header h1 small {
+    color: #888;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0;
+}
+.tabbable {
+    margin-bottom: 15px;
+}
+.nav-tabs.tab-padding {
+    padding: 6px 5px 0;
+    border: 1px solid #DDD;
+}
+.tab-padding.tab-blue {
+    border-bottom-color: #364F6A;
+    background-color: #F3F5F6;
+}
+.nav-tabs {
+    border-color: #DDD;
+    margin-bottom: 0;
+    position: relative;
+    top: 1px;
+}
+.nav-tabs, .nav-tabs>li:first-child>a {
+    margin-left: 0;
+}
+.tab-padding.tab-blue>li.active>a, .tab-padding.tab-blue>li.active>a:focus, .tab-padding.tab-blue>li.active>a:hover {
+    background-color: #fff;
+    box-shadow: none;
+    color: #333;
+    border-color: #364F6A #DDD transparent;
+}
+.nav-tabs.tab-space-3>li>a {
+    margin-right: 3px;
+}
+.tab-padding.tab-blue>li>a, .tab-padding.tab-blue>li>a:focus {
+    background-color: #6C7F92;
+}
+.tab-padding.tab-blue>li>a, .tab-padding.tab-blue>li>a:focus, .tab-padding.tab-blue>li>a:hover {
+    border-color: transparent;
+    color: #fff;
+}
+.tab-blue>li.active>a, .tab-blue>li.active>a:focus, .tab-blue>li.active>a:hover {
+    border-color: #364F6A #DDD transparent;
+    border-top: 2px solid #364F6A;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    background-color: #fff;
+    border-color: #DDD #DDD transparent;
+    border-top: 2px solid #DDD;
+    color: #333;
+    line-height: 16px;
+    margin-top: -1px;
+    z-index: 12;
+}
+.tab-content {
+    border: 1px solid #DDD;
+    padding: 16px 12px;
+    position: relative;
+}
+.user-left {
+    border-right: 1px solid #DDD;
+    padding-right: 15px;
+}
+.user-left .user-image {
+    position: relative;
+    display: inline-block;
+}
+.kv-avatar .file-input {
+    display: table-cell;
+}
+.table thead tr {
+    color: #707070;
+    font-weight: 400;
+}
